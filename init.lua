@@ -211,7 +211,10 @@ require("lazy").setup({
 			}, { mode = "v" })
 		end,
 	},
-
+	{
+		"r-cha/encourage.nvim",
+		config = true,
+	},
 	-- NOTE: Plugins can specify dependencies.
 	--
 	-- The dependencies are proper plugin specifications as well - anything
@@ -265,6 +268,7 @@ require("lazy").setup({
 
 			-- [[ Configure Telescope ]]
 			-- See `:help telescope` and `:help telescope.setup()`
+			require("encourage").setup()
 			require("telescope").setup({
 				-- You can put your default mappings / updates / etc. in here
 				--  All the info you're looking for is in `:help telescope.setup()`
